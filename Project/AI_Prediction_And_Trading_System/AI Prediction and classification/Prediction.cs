@@ -92,11 +92,7 @@ namespace AI_Prediction_and_classification
             }
             var error = computeRMSE(currentPrice, futurePrice);
             Console.WriteLine("Price day RMSE for : " + location + " " + year + " " + error);
-            var workbook = new XLWorkbook();
-            var worksheet = workbook.Worksheets.Add("Sample Sheet");
-            worksheet.Cell("A1").Value = futurePrice.ElementAt(0);
-            workbook.SaveAs("HelloWorld.xlsx");
-            Console.WriteLine(location,year);
+            
             return futurePrice;                             
         }
 

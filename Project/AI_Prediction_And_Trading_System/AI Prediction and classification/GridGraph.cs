@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+////using Excel = Microsoft.Office.Interop.Excel;
 
 namespace AI_Prediction_and_classification
 {
@@ -34,6 +35,12 @@ namespace AI_Prediction_and_classification
         private List<Price> locationListWeather_;
         private List<Price> weatherListMonth_;
         private List<Price> locationListWeatherMonth_;
+
+        //private static Excel.Workbook MyBook = null;
+        //private static Excel.Application MyApp = null;
+        //private static Excel.Worksheet MySheet = null;
+
+        public void initializeExcel() { }
 
         public bool IsEnsemble_
         {
@@ -199,13 +206,14 @@ namespace AI_Prediction_and_classification
                     Point[] point = new Point[locationList_.Count];
                     GraphicsPath gPath = new GraphicsPath();
                     gPath.StartFigure();
-
                     for (int i = 0; i < locationList_.Count; i++)
                     {
                         // Flip the graph, so it goes in the right direction. Or else it will be up-side down. 
                         double y = ((1.0 / (double)locationList_[i].PriceData_) / (1.0 / locationList_.Min().PriceData_)) * this.Height;
                         double x = ((double)i / 365) * this.Width;
                         point[i] = new Point((int)x, (int)y);
+                        Console.WriteLine("Current Price");
+                        Console.Write(locationList_[i].PriceData_); Console.Write(" ");
                     }
                     gPath.AddLines(point);
                     g.DrawPath(pen, gPath);
@@ -230,6 +238,8 @@ namespace AI_Prediction_and_classification
                         double y = ((1.0 / (double)locationListWeather_[i].PriceData_) / (1.0 / locationList_.Min().PriceData_)) * this.Height;
                         double x = (((double)i + 192.0) / 365) * this.Width;
                         point[i] = new Point((int)x, (int)y);
+                        Console.WriteLine("Weather Data");
+                        Console.Write(locationListWeather_[i].PriceData_);
                       
                     }
                     gPath.AddLines(point);
@@ -256,6 +266,10 @@ namespace AI_Prediction_and_classification
                             double y = ((1.0 / (double)predictionFutureList_[i].PriceData_) / (1.0 / locationList_.Min().PriceData_)) * this.Height;
                             double x = (((double)i + 192.0) / 365) * this.Width;
                             point[i] = new Point((int)x, (int)y);
+
+                            Console.WriteLine("Predicted Price");
+                            Console.Write(predictionFutureList_[i].PriceData_);
+
                         }
                         gPath.AddLines(point);
                         g.DrawPath(pen, gPath);

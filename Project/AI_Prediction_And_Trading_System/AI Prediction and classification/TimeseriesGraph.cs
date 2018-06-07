@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using Microsoft.Office.Interop.Excel;
+using ClosedXML.Excel;
 using _Excel = Microsoft.Office.Interop.Excel;
 
 namespace AI_Prediction_and_classification
@@ -181,10 +182,7 @@ namespace AI_Prediction_and_classification
         // Actions when clicking on the Ensemble button
         private void tradeButton_Click(object sender, EventArgs e)
         {
-
-            Form f1 = new Trade();
-            f1.Show();
-            writeToExcel(priceList_);
+            
             //if (this.gridGraph1.IsEnsemble_)
             //{
             //    ensambleButton.Text = "Display ensemble";
@@ -224,6 +222,15 @@ namespace AI_Prediction_and_classification
                 List<Price> futureList = pred.predictFuturePrice(priceList_.Where(p => p.Location_ == Location.Text && p.Year_ == (int)Year.Value).ToList());
                 Console.WriteLine(" ", futureList.ElementAt(0).ToString()," ", futureList.ElementAt(2).ToString()," ", futureList.ElementAt(3).ToString());
                 this.gridGraph1.setFuturePrice(futureList);
+                
+               // for (int i = 0; i < futureList.Count; i++)
+               // {
+                   // MessageBox.Show(futureList[i].ToString());
+                //}
+                //Console.WriteLine(futureList.First(), futureList.ElementAt(2));
+                Form f1 = new Trade();
+                f1.Show();
+                writeToExcel(priceList_);
                 // Prediction one week ahead
                 Prediction predWeek = new Prediction();
                 List<Price> futureWeekList = predWeek.predictionFuturePriceWeek(priceList_.Where(p => p.Location_ == Location.Text && p.Year_ == (int)Year.Value).ToList());
