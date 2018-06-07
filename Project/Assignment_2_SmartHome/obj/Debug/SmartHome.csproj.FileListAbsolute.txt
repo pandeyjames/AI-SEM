@@ -1,0 +1,10 @@
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\bin\Debug\SmartHome.exe.config
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\bin\Debug\SmartHome.exe
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\bin\Debug\SmartHome.pdb
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\obj\Debug\SmartHome.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\obj\Debug\SmartHome.Properties.Resources.resources
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\obj\Debug\SmartHome.SmartHome.resources
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\obj\Debug\SmartHome.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\obj\Debug\SmartHome.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\obj\Debug\SmartHome.exe
+C:\Users\Admin\Desktop\Assignment_2_SmartHome\obj\Debug\SmartHome.pdb

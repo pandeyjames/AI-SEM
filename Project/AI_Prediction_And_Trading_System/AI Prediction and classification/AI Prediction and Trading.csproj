@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB799C18-6C6C-4220-A062-56E6839C723E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AI_Prediction_and_classification</RootNamespace>
+    <AssemblyName>AI Prediction and classification</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.93.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.93.0-rc2\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FANNCSharp, Version=0.2.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\FANNCSharp-x86.0.1.8\lib\FANNCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.3.0.0, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.3.0\lib\net45\FastMember.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColoredBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColoredBox.Designer.cs">
+      <DependentUpon>ColoredBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ensemble.cs" />
+    <Compile Include="Trade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trade.Designer.cs">
+      <DependentUpon>Trade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridGraph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GridGraph.Designer.cs">
+      <DependentUpon>GridGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prediction.cs" />
+    <Compile Include="PredictWeather.cs" />
+    <Compile Include="TimeseriesGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeseriesGraph.Designer.cs">
+      <DependentUpon>TimeseriesGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadXLFiles.cs" />
+    <Compile Include="Price.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Weather.cs" />
+    <EmbeddedResource Include="ColoredBox.resx">
+      <DependentUpon>ColoredBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trade.resx">
+      <DependentUpon>Trade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridGraph.resx">
+      <DependentUpon>GridGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeseriesGraph.resx">
+      <DependentUpon>TimeseriesGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AI_Prediction_and_classification.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\AI_Prediction_and_classification.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\ColoredBox.datasource" />
+    <None Include="Properties\DataSources\Ensemble.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Connection.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Double.ArrayAccessor.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Double.DataAccessor.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Double.NeuralNet+TrainingCallback.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Double.NeuralNet.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Double.TrainingData+DataCreateCallback.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Double.TrainingData.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.FannFile.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Fixed.ArrayAccessor.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Fixed.Connection.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Fixed.DataAccessor.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Fixed.NeuralNet.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Fixed.TrainingData+DataCreateCallback.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Fixed.TrainingData.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Float.ArrayAccessor.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Float.Connection.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Float.DataAccessor.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Float.NeuralNet+TrainingCallback.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Float.NeuralNet.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Float.TrainingData+DataCreateCallback.datasource" />
+    <None Include="Properties\DataSources\FANNCSharp.Float.TrainingData.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\GridGraph.datasource" />
+    <None Include="Properties\DataSources\LoadXLFiles.datasource" />
+    <None Include="Properties\DataSources\Prediction.datasource" />
+    <None Include="Properties\DataSources\PredictWeather.datasource" />
+    <None Include="Properties\DataSources\Price.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\TimeseriesGraph.datasource" />
+    <None Include="Properties\DataSources\Weather.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\FANNCSharp-x86.0.1.8\build\FANNCSharp-x86.targets" Condition="Exists('..\packages\FANNCSharp-x86.0.1.8\build\FANNCSharp-x86.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\FANNCSharp-x86.0.1.8\build\FANNCSharp-x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\FANNCSharp-x86.0.1.8\build\FANNCSharp-x86.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

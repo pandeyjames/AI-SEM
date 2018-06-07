@@ -1,0 +1,14 @@
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\bin\Debug\AI Prediction and classification.exe.config
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\bin\Debug\AI Prediction and classification.exe
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\bin\Debug\AI Prediction and classification.pdb
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\bin\Debug\FANNCSharp.dll
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI Prediction and classification.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI_Prediction_and_classification.ColoredBox.resources
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI_Prediction_and_classification.GridGraph.resources
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI_Prediction_and_classification.TimeseriesGraph.resources
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI_Prediction_and_classification.Properties.Resources.resources
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI Prediction and classification.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI Prediction and classification.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI Prediction and classification.csproj.CopyComplete
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI Prediction and classification.exe
+C:\Users\Admin\Desktop\AI_Prediction_And_Classification_System.git\AI Prediction and classification\obj\Debug\AI Prediction and classification.pdb
